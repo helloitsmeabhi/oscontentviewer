@@ -1,0 +1,111 @@
+<html>
+    <title>
+        Engineering
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href={% static 'styles.css' %}>
+    <link rel="stylesheet" href={% static 'back.css' %}>
+    <link rel="stylesheet" href={% static 'card.css' %}>
+    <link rel="icon" href={% static 'Paradox.ico' %} type="image/x-icon">
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+            <div class="container-fluid">
+              <a class="navbar-brand" href={% url 'search' %} >
+                <img src={% static 'k.png' %} width="30" height="30" alt="" style="border-radius: 10px;">
+              </a>
+              <a class="navbar-brand" href={% url 'domain' %}>Knowledge</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href={% url 'domain' %}>Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Gemini</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <br>
+                <center><h1 style="color: white;"><b>Science Learning Path</b></h1></center>
+            <br>
+
+       
+          <div class="grid gap-3">
+            <div class="container text-center">
+              <div class="row p-2">
+                  <div class="col p-2">
+                    <div class="card" style="width: 18rem;">
+                    <img src={% static 'ang.jpg' %} class="card-img-top" alt="..." height="175px">
+                    <div class="card-body">
+                    <h4 class="card-title" style="font-family: consolas;color: white;">Angular Momentum</h4>
+                    {% csrf_token %}
+                    <form action={% url 'angu' %}>
+                        <button class="btn btn-secondary" type="submit">
+                            learn
+                        </button>
+                    </form>
+                    </div>
+         
+                    </div>
+                </div>
+                <div class="col p-2">
+                    <div class="card" style="width: 18rem;">
+                    <img src={% static 'per.jpg' %} class="card-img-top" alt="..." height="175px">
+                    <div class="card-body">
+                    <h5 class="card-title" style="font-family: consolas;color: white;">Periodic elements</h5>
+                    {% csrf_token %}
+                    <form action={% url 'per' %}>
+                        <button class="btn btn-secondary" type="submit">
+                            learn
+                        </button>
+                    </form>
+                    </div>
+                   
+                    </div>
+                </div>
+                <div class="col p-2">
+                    <div class="card" style="width: 18rem;">
+                    <img src={% static 'elec.jpg' %} class="card-img-top" alt="..." height="175px">
+                    <div class="card-body">
+                    <h5 class="card-title" style="font-family: consolas;color: white;">Electrostatics</h5>
+                    {% csrf_token %}
+                    <form action={% url 'elec' %}>
+                        <button class="btn btn-secondary" type="submit">
+                            learn
+                        </button>
+                    </form>
+                    </div>
+    
+                    </div>
+                </div>
+                <div class="col p-2">
+                    <div class="card" style="width: 18rem;">
+                    <img src={% static 'bio.jpg' %} class="card-img-top" alt="..." height="175px">
+                    <div class="card-body">
+                    <h4 class="card-title" style="font-family: consolas;color: white;">Biology</h4>
+                    {% csrf_token %}
+                    <form action={% url 'bio' %}>
+                        <button class="btn btn-secondary" type="submit">
+                           learn
+                        </button>
+                    </form>
+                    </div>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    
+    </body>
+</html>

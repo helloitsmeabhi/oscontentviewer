@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'back.css' %}">
+    <link rel="stylesheet" href="{% static 'mainpage.css' %}">
+    <link rel="stylesheet" href={% static 'image.css' %}>
+    <link rel="icon" href="{% static 'Paradox.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <br>
+    <center>
+    <div class="image-container">
+        <img src={% static 'k.png' %} alt="Centered Image" />
+    </div>
+</center>
+    <div style="height: 100vh;">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-content">
+                    <a href="{% url 'login' %}">
+                        <img src="{% static 'login.png' %}" alt="Card Image">
+                    </a>
+                    <br>
+                    <h1>
+                        <center>Login</center>
+                    </h1>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <a href="{% url 'signup' %}">
+                        <img src="{% static 'signup.png' %}" alt="Card Image">
+                    </a>
+                    <br>
+                    <h1>
+                        <center>Sign Up</center>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
